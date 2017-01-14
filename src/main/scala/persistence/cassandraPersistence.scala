@@ -19,7 +19,7 @@ try{
 
   def updateUser(userDetail: User): Boolean ={
     try{
-      cassandraConn.execute(s"update userTable SET gender ='${userDetail.nickname}' , nickName ='${userDetail.nickname}'  WHERE userid = '${userDetail.userid}'")
+      cassandraConn.execute(s"update userTable SET gender ='${userDetail.gender}' , nickName ='${userDetail.nickname}'  WHERE userid = '${userDetail.userid}'")
       true
     }
     catch {

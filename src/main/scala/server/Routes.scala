@@ -7,6 +7,7 @@ import akka.util.Timeout
 import handler.RequestHandler
 
 import scala.concurrent.duration.DurationInt
+
 /**
   * Eventuate.Created by knoldus on 4/1/17.
   */
