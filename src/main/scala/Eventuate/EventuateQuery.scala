@@ -1,7 +1,7 @@
 package Eventuate
 
 import akka.actor.ActorRef
-import com.rbmhtechnology.eventuate.EventsourcedActor
+import com.rbmhtechnology.eventuate.EventsourcedView
 import persistence.{User, cassandraPersistence}
 
 /**
@@ -16,7 +16,7 @@ case class ViewAccountFailure(cause: Throwable)
 
 
 
-class EventuateQuery(replicaId: String, override val eventLog: ActorRef) extends EventsourcedActor with cassandraPersistence{
+class EventuateQuery(replicaId: String, override val eventLog: ActorRef) extends EventsourcedView with cassandraPersistence{
 
   override val id = s"s-av-$replicaId"
 
